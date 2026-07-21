@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal data — never commit
+*.local.txt
+/scripts/resume.local.txt

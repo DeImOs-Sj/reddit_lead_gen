@@ -1,0 +1,22 @@
+use_default_settings: true
+
+general:
+  instance_name: "leadgen-local-searxng"
+
+server:
+  secret_key: "b89f9729be863300eccba790a812c3bc0416c61d4ed463b3dcacc15ad66c1f34"
+  limiter: false
+  image_proxy: false
+
+search:
+  formats:
+    - html
+    - json
+
+engines:
+  - name: bing
+    disabled: false
+  - name: mojeek
+    disabled: false
+  - name: presearch
+    disabled: false
