@@ -15,6 +15,7 @@ export const leadStatusEnum = pgEnum("lead_status", [
   "replied",
   "won",
   "lost",
+  "delivered",
 ]);
 
 export const leadTemperatureEnum = pgEnum("lead_temperature", [

@@ -5,8 +5,7 @@ const groq = createGroq({
 });
 
 // Fast/cheap model for high-volume classification passes (intent, temperature).
-// gpt-oss-20b supports Groq's structured-output (json_schema) mode, which
-// llama-3.1-8b-instant does not.
+// openai/gpt-oss-20b supports Groq's structured-output (json_schema) mode.
 export const fastModel = groq("openai/gpt-oss-20b");
 
 // Stronger model for extraction and drafting, where quality matters more than

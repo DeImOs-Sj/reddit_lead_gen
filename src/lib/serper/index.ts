@@ -31,7 +31,8 @@ export async function searchReddit(keyword: string): Promise<SerperResult[]> {
     throw new Error("SERPER_API_KEY is not set");
   }
 
-  const query = `site:reddit.com ${keyword}`;
+  // Exclude "for hire" posts — we want people hiring, not people offering services
+  const query = `site:reddit.com ${keyword} -"for hire" -"forhire" -"hiring me"`;
 
   // tbs=qdr:w restricts to the past week — without it, Google's index ranks by
   // relevance not recency, and a live test surfaced 2020-2023 posts (dead leads,
